@@ -2,7 +2,6 @@ from pathlib import Path
 import cv2
 import depthai as dai
 import numpy as np
-from numpy import random
 import time
 from sort import *
 import argparse
