@@ -11,7 +11,3 @@ Run the following command to activate the keyboard switch for activating/deactiv
 ```python blur_with_oak.py -k```
 
 In this mode, users are allowed to turn on/off face blurring by pressing the spacebar.
-
-## Video Demonstration
-
-<video src='./demo.mp4' width=360/>
