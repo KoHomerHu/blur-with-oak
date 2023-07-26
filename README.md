@@ -4,8 +4,14 @@ Real-time face detection + tracking + blurring using OAK-D-Lite. We use the [`yo
 
 What we are doing is similar to the DepthAI experiment [gen2-blur-faces](https://github.com/luxonis/depthai-experiments/tree/master/gen2-blur-faces), although we use YOLOv8n and the SORT algorithm instead of mobilenet detection and zero term object tracking node on OAK. 
 
+## Argument `keyboardOn`
+
 Run the following command to activate the keyboard switch for activating/deactivating blurring: 
 
 ```python blur_with_oak.py -k```
 
 In this mode, users are allowed to turn on/off face blurring by pressing the spacebar.
+
+## Video Demonstration
+
+<video src='./demo.mp4' width=360/>
