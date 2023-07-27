@@ -162,10 +162,10 @@ class OAKBlur():
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Specification of model path, fps, resolution, etc.')
     parser.add_argument('-b', '--blobPath', action = 'store', default = './yolov8n-face_openvino_2022.1_6shave.blob', help = 'specify path of *.blob file')
-    parser.add_argument('-f', '--fps', action = 'store', default = 35, help = "specify fps")
-    parser.add_argument('--img_size', action = 'store', default = 256, help = "specify size of image to be send to the detector, default is 320")
-    parser.add_argument('-c', '--conf', action = 'store', default = 0.2, help = "Setup confidence threshold")
-    parser.add_argument('-k', '--keyboardOn', action = 'store_true', help = "Turn on keyboard control (by pressing the space bar) of blurring or not")
+    parser.add_argument('-f', '--fps', action = 'store', default = 35, help = "specify fps, maximum capped at 35")
+    parser.add_argument('--img_size', action = 'store', default = 256, help = "specify size of image to be send to the detector, default is 256")
+    parser.add_argument('-c', '--conf', action = 'store', default = 0.2, help = "setup confidence threshold, default is 0.2")
+    parser.add_argument('-k', '--keyboardOn', action = 'store_true', help = "turn on keyboard control (by pressing the space bar) of blurring or not")
 
     args = parser.parse_args()
     oak = OAKBlur(blobPath = args.blobPath, fps = int(args.fps), img_size = int(args.img_size), 
